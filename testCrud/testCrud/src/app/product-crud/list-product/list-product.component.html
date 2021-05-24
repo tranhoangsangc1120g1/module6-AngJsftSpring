@@ -1,0 +1,39 @@
+<div>
+<!--  <input type="text" [placeholder]="selected === 'date' ? 'exp: yyyy-mm-dd' : selected" (keyup)="search($event.target.value)"/>-->
+  <input type="text" [placeholder]="selected === 'date' ? 'exp: yyyy-mm-dd' : selected" (keyup)="search($event.target.value)"/>
+  <select [(ngModel)]="selected">
+    <option *ngFor="let item of ITEMS" [ngValue]="item">{{item}}</option>
+  </select>
+</div>
+
+<div *ngIf="productList.length ; else nodata">
+<table border="1" width="500px">
+  <thead>
+  <tr>
+    <th> STT:</th>
+    <th> ID:</th>
+    <th> Name:</th>
+    <th> Description:</th>
+    <th> Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of productList , let i =index">
+    <td>{{i + 1}}</td>
+    <td>{{item.id}}</td>
+    <td>{{item.name | titlecase }}</td>
+    <td>{{item.description | titlecase}}</td>
+    <td>
+      <button >VIEW</button>
+      <button (click)="editProduct(item.id)">EDIT</button>
+      <button (click)="deletedProduct(item.id)">DELETED</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div >
+<ng-template #nodata>
+<h1 style="color: red">No DATA </h1>
+</ng-template>
+</div>

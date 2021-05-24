@@ -1,0 +1,31 @@
+{
+  "studentList": [
+    {
+      "id": 3,
+      "ten": "Sang Sang Sang",
+      "tenNhom": "Nhom 3",
+      "tenDeTai": "Angular",
+      "giaoVien": "Trung",
+      "email": "thjsang3@gmail.com",
+      "sdt": "0704074806"
+    },
+    {
+      "id": 4,
+      "ten": "ss ss ",
+      "tenNhom": "Nhom 2",
+      "tenDeTai": "ss ",
+      "giaoVien": "Hai",
+      "email": "ss ",
+      "sdt": "12312312312"
+    },
+    {
+      "id": 5,
+      "ten": "tran hoang sang",
+      "tenNhom": "Nhom 3",
+      "tenDeTai": "angular cli",
+      "giaoVien": "Trung",
+      "email": "sang@gmail.com",
+      "sdt": "1231331231"
+    }
+  ]
+}

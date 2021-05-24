@@ -1,0 +1,32 @@
+
+<table border="1" width="500px" class="table table-hover">
+    <thead>
+    <tr>
+      <th> STT:</th>
+      <th> ID:</th>
+      <th> Ten:</th>
+      <th> TenNhom:</th>
+      <th> GiaoVien:</th>
+      <th> Email:</th>
+      <th> SDT:</th>
+      <th> Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of studentList , let i =index">
+      <td>{{i + 1}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.ten | titlecase }}</td>
+      <td>{{item.tenNhom | titlecase}}</td>
+      <td>{{item.giaoVien | titlecase}}</td>
+      <td>{{item.email }}</td>
+      <td>{{item.sdt  }}</td>
+      <td>
+        <button (click)="editProduct(item.id)" class="btn btn-primary">EDIT</button>
+        <button (click)="deletedProduct(item.id)" class="btn btn-danger">DELETED</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
